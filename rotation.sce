@@ -1,0 +1,23 @@
+clc;
+clear all;
+a = imread("C:\Users\Admin\Desktop\21EG107B58\img.jpg");
+figure 
+subplot(231);
+title("Original image");
+imshow(a);
+b = imrotate(a,45);
+subplot(232);
+title("Rotated + 45°");
+imshow(b);
+c = imrotate(a,90);
+subplot(235);
+title("Rotated + 90°");
+imshow(c);
+d = imrotate(a,180);
+subplot(234);
+title("Rotated + 180°");
+imshow(d);
+e = imrotate(a,-45);
+subplot(233);
+title("Rotated - 45°");
+imshow(e);

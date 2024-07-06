@@ -1,0 +1,27 @@
+clc;
+clear all;
+a = imread("C:\Users\Admin\Desktop\21EG107B58\abc.jpg");
+figure 
+subplot(331);
+title("Original image");
+imshow(a);
+a_g = rgb2gray(a);
+subplot(332);
+title("Gray image");
+imshow(a_g);
+d = im2bw(a_g,0.8);
+subplot(3,3,3);
+title("Threshold a 80%");
+imshow(d);
+e = 1-d;
+subplot(3,3,4);
+title("Inverted Image");
+imshow(e);
+d1 = im2bw(a_g,0.5);
+subplot(3,3,5);
+title("Threshold a 50%");
+imshow(d1);
+d2 = im2bw(a_g,0.1);
+subplot(3,3,6);
+title("Threshold a 10%");
+imshow(d2);
